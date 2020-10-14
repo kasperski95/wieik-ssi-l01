@@ -1,4 +1,7 @@
 {
   "cSpell.words": ["Szczegoly", "Zakupow", "ilosc", "tytul"],
-  "javascript.format.enable": false
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
