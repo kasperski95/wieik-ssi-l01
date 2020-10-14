@@ -9,7 +9,7 @@ export default function Zrobione({ zadania }) {
             <li key={nazwa}>
               <input type='checkbox' defaultChecked={zrobione} />
               {nazwa}
-              <a href='#' className='checklist__task--remove' />
+              <button className='checklist__task--remove' />
             </li>
           );
         })}

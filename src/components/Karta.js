@@ -9,7 +9,9 @@ export default function Karta({ id, tytul, opis, status, zadania }) {
   return (
     <div className='card'>
       <div
-        className='card__title'
+        className={`card__title${
+          pokazywanieSzczegolow ? ' card__title--is-open' : ''
+        }`}
         onClick={() => ustawPokazywanieSzczegolow(!pokazywanieSzczegolow)}
       >
         {tytul}
