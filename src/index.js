@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import TablicaKanban from './components/TablicaKanban';
 
 const listaKart = [

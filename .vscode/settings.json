@@ -1,5 +1,11 @@
 {
-  "cSpell.words": ["Szczegoly", "Zakupow", "ilosc", "tytul"],
+  "cSpell.words": [
+    "Szczegolow",
+    "Szczegoly",
+    "Zakupow",
+    "ilosc",
+    "tytul"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

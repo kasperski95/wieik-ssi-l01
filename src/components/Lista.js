@@ -6,7 +6,7 @@ export default function Lista({ tytul, karty }) {
     <div className='list'>
       <h1>{tytul}</h1>
       {(karty || []).map((karta) => (
-        <Karta {...karta} />
+        <Karta key={karta.id} {...karta} />
       ))}
     </div>
   );
