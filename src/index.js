@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import TablicaKanban from './components/TablicaKanban'
+
+const listaKart = [
+  {
+    id: 1,
+    tytul: "Przeczytać książkę",
+    opis: "Muszę przeczytać całą książkę",
+    status: "in-progress",
+    zadania: []
+  }, {
+    id: 2,
+    tytul: "Napisać trochę kodu",
+    opis: "Będę przepisywał kod z laboratorium",
+    status: "todo",
+    zadania: [
+      { id: 1, nazwa: "Przykład listy zakupów", zrobione: true },
+      { id: 2, nazwa: "Przykład kanban", zrobione: false },
+      { id: 3, nazwa: "Mój własny przykład", zrobione: false }
+    ]
+  }
+]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TablicaKanban karty={listaKart} />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
