@@ -1,3 +1,1 @@
-# WIEiK SSI L 01
-
-Adjusted for VS Code.
+# WIEiK SSI L 02
