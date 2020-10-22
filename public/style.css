@@ -92,3 +92,20 @@ ul {
   color: #d66;
   content: 'x';
 }
+
+#modal-root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.card--floating {
+  background-color: white;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fafafa;
+  border-radius: 8px;
+}
