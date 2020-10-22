@@ -1,0 +1,9 @@
+Zadanie
+
+- dodawanie tych wiekszych taskow
+- przemieszczanie
+  - strzalki
+  - drag and drop idealnie
+
+
+za tydzien test praktyczny
