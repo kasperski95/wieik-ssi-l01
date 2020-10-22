@@ -37,6 +37,7 @@ function Lista({ id, tytul, karty, funkcjeZwrotne }) {
               onChange={(e) => {
                 setFormData({ ...formData, tytul: e.target.value });
               }}
+              autoFocus={true}
             />
             <input
               name='opis'

@@ -59,6 +59,13 @@ function TablicaKanbanKontener() {
     [karty]
   );
 
+  const zmienKarte = React.useCallback(
+    (karta) => {
+      ustawKarty([...karty.filter(({ id }) => id !== karta.id), karta]);
+    },
+    [karty]
+  );
+
   const dodajZadanie = React.useCallback(
     (idKarty, nazwaZadania) => {
       const poprzedniStan = karty;
@@ -107,7 +114,13 @@ function TablicaKanbanKontener() {
   return (
     <TablicaKanban
       karty={karty}
-      funkcjeZwrotne={{ dodajZadanie, usunZadanie, zmienZadanie, dodajKarte }}
+      funkcjeZwrotne={{
+        dodajZadanie,
+        usunZadanie,
+        zmienZadanie,
+        dodajKarte,
+        zmienKarte,
+      }}
     />
   );
 }

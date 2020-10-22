@@ -49,6 +49,42 @@ function Karta({ id, tytul, opis, status, zadania, kolor, funkcjeZwrotne }) {
           />
         </div>
       )}
+      <div>
+        <button
+          children='<'
+          onClick={() => {
+            let newStatus = status;
+            if (status === 'in-progress') newStatus = 'todo';
+            if (status === 'zrobione') newStatus = 'in-progress';
+
+            funkcjeZwrotne.zmienKarte({
+              id,
+              tytul,
+              opis,
+              status: newStatus,
+              zadania,
+              kolor,
+            });
+          }}
+        />
+        <button
+          children='>'
+          onClick={() => {
+            let newStatus = status;
+            if (status === 'in-progress') newStatus = 'zrobione';
+            if (status === 'todo') newStatus = 'in-progress';
+
+            funkcjeZwrotne.zmienKarte({
+              id,
+              tytul,
+              opis,
+              status: newStatus,
+              zadania,
+              kolor,
+            });
+          }}
+        />
+      </div>
     </div>
   );
 }
@@ -57,7 +93,7 @@ Karta.propTypes = {
   id: PropTypes.number,
   tytul: walidatorTytulu,
   opis: PropTypes.string,
-  // status: PropTypes.string,
+  status: PropTypes.string,
   zadania: PropTypes.arrayOf(PropTypes.object),
   kolor: PropTypes.string,
   funkcjeZwrotne: PropTypes.object,
